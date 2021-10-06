@@ -30,12 +30,12 @@ module.exports = {
         switch(choices) {
             case "guildMemberAdd" : {
                 client.emit("guildMemberAdd", interaction.member)
-                interaction.reply({content : "Emitted the event.", ephemeral : true})
+                interaction.reply({content : "Emitted the event.", ephemeral : true}).catch((err) => console.log("error while call guildmemberadd" + err))
             }
             break;
             case "guildMemberRemove" : {
                 client.emit("guildMemberRemove", interaction.member)
-                interaction.reply({content : "Emitted the event.", ephemeral : true})
+                interaction.reply({content : "Emitted the event.", ephemeral : true}).catch((err) => console.log("error while call guildmemberadd" + err))
             }
             break;
         }

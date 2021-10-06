@@ -10,7 +10,7 @@ module.exports = {
     {
         const { user, guild } = member
 
-        member.roles.add('894967284215451659')
+        // member.roles.add('894967284215451659').catch((err) => console.log("error while adding role" + err))
         const welcomer = new WebhookClient({
             id : "894981455204192277",
             token : "xwyBAnKX4MP4YXjITVb51p5vDNiyHVIndLzOnx7CB6lLRx66DnZBon1wMfrraqRC5PRZ"
@@ -28,6 +28,6 @@ module.exports = {
         )
         .setFooter(`ID : ${user.id}`)
 
-        welcomer.send({embeds : [welcome]}).catch(err => console.log(err))
+        welcomer.send({embeds : [welcome]}).catch(err => console.log("err" + err))
     }
 }

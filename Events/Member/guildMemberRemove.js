@@ -27,6 +27,6 @@ module.exports = {
         )
         .setFooter(`ID : ${user.id}`)
 
-        welcomer.send({embeds : [welcome]}).catch(err => console.log(err))
+        welcomer.send({embeds : [welcome]}).catch(err => console.log("err" + err))
     }
 }
